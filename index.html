@@ -1,0 +1,166 @@
+<button>Clique aqui</button>
+
+<style>
+    /* Exercício 1: Estilizar botão com hover */
+button {
+  background-color: green; /* Cor de fundo do botão */
+  color: white; /* Cor do texto */
+  border-radius: 8px; /* Borda arredondada */
+  border: none; /* Remove a borda padrão */
+  padding: 10px 20px; /* Espaçamento interno */
+  cursor: pointer; /* Cursor de mão ao passar o mouse */
+}
+
+button:hover {
+  background-color: darkgreen; /* Cor de fundo ao passar o mouse */
+}
+</style>
+
+<div class="caixa">
+    Conteúdo da caixa
+  </div>
+
+  <style>
+    /* Exercício 2: Trabalhar com bordas, margens e padding */
+.caixa {
+  width: 300px; /* Largura da caixa */
+  height: 100px; /* Altura da caixa */
+  border: 2px solid black; /* Borda sólida preta */
+  padding: 20px; /* Espaçamento interno */
+  margin: 30px; /* Margem externa */
+}
+  </style>
+
+<div class="card">
+    <h2>Maria Oliveira</h2>
+    <p>Desenvolvedora Front-end</p>
+    <button>Seguir</button>
+  </div>
+
+  <style>
+    /* Exercício 3: Layout de mini cartão de perfil */
+.card {
+  background-color: white; /* Fundo branco */
+  border: 1px solid lightgray; /* Borda cinza clara */
+  border-radius: 10px; /* Bordas arredondadas */
+  text-align: center; /* Centraliza o texto */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+  padding: 20px; /* Espaçamento interno */
+  width: 250px; /* Largura fixa do cartão */
+  margin: 20px auto; /* Centraliza o cartão horizontalmente */
+}
+
+.card button {
+  background-color: lightblue; /* Cor suave do botão */
+  color: black; /* Cor do texto */
+  border: none; /* Remove a borda padrão */
+  border-radius: 5px; /* Bordas arredondadas */
+  padding: 10px 15px; /* Espaçamento interno */
+  cursor: pointer; /* Cursor de mão */
+}
+
+.card button:hover {
+  background-color: deepskyblue; /* Cor ao passar o mouse */
+}
+  </style>
+
+<nav class="menu">
+    <a href="#">Início</a>
+    <a href="#">Sobre</a>
+    <a href="#">Serviços</a>
+    <a href="#">Contato</a>
+  </nav>
+
+  <style>
+    /* Exercício 4: Menu de Navegação Horizontal */
+.menu {
+  display: flex; /* Exibe os links lado a lado */
+  gap: 20px; /* Espaçamento entre os links */
+  justify-content: center; /* Centraliza o menu horizontalmente */
+  margin: 20px 0; /* Margem externa acima e abaixo */
+}
+
+.menu a {
+  text-decoration: none; /* Remove o sublinhado dos links */
+  color: black; /* Cor do texto */
+  font-size: 16px; /* Tamanho da fonte */
+  padding: 5px 10px; /* Espaçamento interno */
+  transition: color 0.3s ease; /* Suaviza a transição de cor */
+}
+
+.menu a:hover {
+  color: blue; /* Altera a cor do texto ao passar o mouse */
+}
+  </style>
+
+<form class="formulario">
+    <input type="text" placeholder="Nome">
+    <input type="email" placeholder="Email">
+    <input type="text" placeholder="Telefone">
+    <input type="text" placeholder="Cidade">
+    <button>Enviar</button>
+  </form>
+
+  <style>
+    /* Exercício 5: Formulário com campos organizados em duas colunas */
+.formulario {
+  display: grid; /* Usa grid layout */
+  grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+  gap: 20px; /* Espaçamento entre os campos */
+  max-width: 500px; /* Largura máxima do formulário */
+  margin: 20px auto; /* Centraliza o formulário horizontalmente */
+}
+
+.formulario input {
+  padding: 10px; /* Espaçamento interno dos campos */
+  border: 1px solid lightgray; /* Borda leve */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-size: 14px; /* Tamanho da fonte */
+}
+
+.formulario button {
+  grid-column: span 2; /* O botão ocupa as duas colunas */
+  justify-self: center; /* Centraliza o botão */
+  padding: 10px 20px; /* Espaçamento interno */
+  background-color: green; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  border: none; /* Remove a borda padrão */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de mão */
+}
+
+.formulario button:hover {
+  background-color: darkgreen; /* Cor ao passar o mouse */
+}
+  </style>
+
+<form class="formulario">
+    <input type="text" placeholder="Nome">
+    <input type="email" placeholder="Email">
+    <input type="text" placeholder="Telefone">
+    <input type="text" placeholder="Cidade">
+    <button>Enviar</button>
+  </form>
+
+  <style>
+    /* Exercício 6: Lista com ícones personalizados */
+.lista-tarefas {
+  list-style: none; /* Remove as bolinhas padrão da lista */
+  padding: 0; /* Remove o espaçamento interno da lista */
+}
+
+.lista-tarefas li {
+  position: relative; /* Define o posicionamento relativo para os itens */
+  padding-left: 25px; /* Adiciona espaço à esquerda para o ícone */
+  font-size: 16px; /* Define o tamanho da fonte */
+}
+
+.lista-tarefas li::before {
+  content: "✓"; /* Adiciona o ícone de check antes do texto */
+  color: green; /* Define a cor do ícone */
+  position: absolute; /* Posiciona o ícone de forma absoluta */
+  left: 0; /* Alinha o ícone à esquerda */
+  top: 0; /* Alinha o ícone ao topo */
+  font-size: 16px; /* Define o tamanho do ícone */
+}
+  </style>

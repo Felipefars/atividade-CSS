@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alterar Tema</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Bem-vindo!</h1>
+  <button id="modoClaro">Modo Claro</button>
+  <button id="modoEscuro">Modo Escuro</button>
+
+  <script>
+    // Alterna para o tema claro
+    document.getElementById('modoClaro').addEventListener('click', () => {
+      document.body.classList.remove('escuro');
+      document.body.classList.add('claro');
+    });
+
+    // Alterna para o tema escuro
+    document.getElementById('modoEscuro').addEventListener('click', () => {
+      document.body.classList.remove('claro');
+      document.body.classList.add('escuro');
+    });
+  </script>
+</body>
+</html>
+
+<style>
+    /* Tema Claro */
+body.claro {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Tema Escuro */
+body.escuro {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Estilização básica */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+</style>

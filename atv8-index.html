@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokedex</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Pokedex</h1>
+  <div class="pokedex">
+    <p><strong>Peso:</strong> <span id="peso">---</span></p>
+    <p><strong>Altura:</strong> <span id="altura">---</span></p>
+    <p><strong>Habilidades:</strong> <span id="habilidades">---</span></p>
+    <p><strong>Estatísticas:</strong> <span id="estatisticas">---</span></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+<style>
+    -CSS/style.css */
+/* Estiliza a Pokedex */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+
+.pokedex {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.pokedex p {
+  margin: 10px 0;
+}
+
+</style>
+
+<script>
+    // Função para buscar dados do Pokémon
+async function buscarPokemon(nome) {
+  try {
+    const resposta = await fetch(`https://pokeapi.co/api/v2/pokemon/${nome}`);
+    const dados = await resposta.json();
+
+    // Atualiza os dados na Pokedex
+    document.getElementById('peso').textContent = `${dados.weight} kg`;
+    document.getElementById('altura').textContent = `${dados.height} m`;
+    document.getElementById('habilidades').textContent = dados.abilities
+      .map(habilidade => habilidade.ability.name)
+      .join(', ');
+    document.getElementById('estatisticas').textContent = dados.stats
+      .map(stat => `${stat.stat.name}: ${stat.base_stat}`)
+      .join(', ');
+  } catch (erro) {
+    console.error('Erro ao buscar Pokémon:', erro);
+  }
+}
+
+// Exemplo: Buscar dados do Pokémon "pikachu"
+buscarPokemon('pikachu');
+</script>
+
